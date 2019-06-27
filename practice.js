@@ -16,6 +16,13 @@
 
 //Code here
 
+let me = {
+  name: 'Des',
+  age: '20'
+};
+
+alert(me.name);
+
 ////////// PROBLEM 2 //////////
 
 /*
@@ -23,12 +30,22 @@
   Have the values to those keys be strings that are equal to your favorite thing in that category.
 */
 
+let favoriteThings = {
+  band: 'Money',
+  food: 'Cat',
+  person: 'Mary jane',
+  book: 'Mary Wanna',
+  movie: 'Mary Potter',
+  holiday: 'DevMountain'
+}
 //Code here
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
   and then another key named 'brand' with the value being your favorite brand.
 */
+favoriteThings.car = 'Mary mobile'
+favoriteThings.brand = 'Mary tees'
 
 //Code here
 
@@ -37,6 +54,8 @@
   and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 */
 
+favoriteThings.book = 'Harry Potter'
+favoriteThings.food = 'Chicken Nuggets'
 //Code here
 
 ////////// PROBLEM 3 //////////
@@ -49,11 +68,23 @@
   Using dot notation, add another key (or property) to your backPack object that is named color, with the value being the color of your backpack.
 */
 
+let backPack = {}
+
+let item = 'firstPocket';
+
+backPack[item] = 'chapstick'
+
+backPack.color = 'what';
+
+
+
+
 //Code here
 
 /*
   After you do the above, alert your entire backPack object.
 */
+alert(backPack)
 
 //Code here
 
@@ -62,7 +93,7 @@ You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
 Instead, console.log your whole backPack object and then check out the console.
 */
-
+console.log(backPack)
 //Code here
 
 ////////// PROBLEM 4 //////////
@@ -84,6 +115,9 @@ var user2 = {
   Make that change without modifying the original object code above.
 */
 
+user2.name = 'Bryan G. Smith'
+user2.email = 'bryan.smith@devmounta.in'
+
 //Code Here
 
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
@@ -94,19 +128,30 @@ var user2 = {
 /*
   Create an empty object called methodCollection.
 */
-
+let methodCollection = {}
 //Code Here
 
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object.
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console.
 */
+methodCollection.alertHello = function(){
+  alert('hello')
+}
+
+methodCollection.logHello = function(){
+  console.log('hello')
+}
 
 //Code Here
 
 /*
   Now call your alertHello and logHello methods.
 */
+
+alertHello()
+logHello()
+
 
 //Code Here
 
@@ -117,6 +162,13 @@ var user2 = {
   Return a new object with all of the information that you passed in.
 */
 
+function makePerson(name,birthday,ssn) {
+  return {
+    name: name,
+    birthday:birthday ,
+    ssn:ssn
+  }
+}
 //Code Here
 
 ////////// PROBLEM 7 //////////
@@ -127,3 +179,11 @@ var user2 = {
 */
 
 //Code Here
+
+function makeCard(cardNumber, expirationDate, securityCode){
+  return {
+    cardNumber: cardNumber,
+    expirationDate: expirationDate,
+    securityCode: securityCode
+  }
+}
